@@ -7,7 +7,7 @@ A simple application to send magic packets to multiple hosts.
 
 ` wol [address]`
 
-Send magic packet to a single device specified by its MAc address, e.g. `wol 01-23-45-67-89-AB`
+Send magic packet to a single device specified by its MAC address, e.g. `wol 01-23-45-67-89-AB`
 
 ### Multiple devices
 

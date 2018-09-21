@@ -7,24 +7,35 @@ namespace Therezin.WakeOnLan
         static void Main(string[] args)
         {
             var Client = new Sender();
-            foreach (string Target in args)
+
+            // No params? Asking for help?
+            if (args.Length == 0 || args[0] == "/?")
             {
-                if (Target.ValidateMacAddress())
+                var HelpMessage = Properties.Resources.Help;
+                Console.WriteLine(HelpMessage);
+            }
+            else
+            {
+                // Regular use.
+                foreach (string Target in args)
                 {
-                    Console.Write("Sending magic packet to {0}...", Target);
-                    try
+                    if (Target.ValidateMacAddress())
                     {
-                        Client.SendMagicPacket(Target.ToMacAddress());
-                        Console.WriteLine("OK");
+                        Console.Write("Sending magic packet to {0}...", Target);
+                        try
+                        {
+                            Client.SendMagicPacket(Target.ToMacAddress());
+                            Console.WriteLine("OK");
+                        }
+                        catch (Exception Ex)
+                        {
+                            Console.WriteLine(Ex.Message);
+                        }
                     }
-                    catch (Exception Ex)
+                    else
                     {
-                        Console.WriteLine(Ex.Message);
+                        Console.WriteLine("\"{0}\" is not a valid MAC address.", Target);
                     }
-                }
-                else
-                {
-                    Console.WriteLine("\"{0}\" is not a valid MAC address.", Target);
                 }
             }
         }

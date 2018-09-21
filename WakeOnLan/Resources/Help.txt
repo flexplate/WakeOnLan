@@ -1,0 +1,12 @@
+Send magic packets to wake one or more computers via Wake-On-Lan.
+
+WOL [device]
+WOL [device1] [device2] ... [deviceN]
+WOL /?
+
+  device          MAC address of recipient device to send magic packets to.
+                  Separate multiple recipient devices with spaces.
+                  MAC addresses are accepted in the format 01-23-45-67-89-AB or
+                  0123.4567.89AB, upper- or lower-case, using colons, hyphens 
+                  or dots as separators.
+  /?              Prints this help message.

@@ -3,9 +3,9 @@ using System.Net.Sockets;
 
 namespace Therezin.WakeOnLan
 {
-	public class Sender:UdpClient
-	{
-        public Sender():base()
+    public class Sender : UdpClient
+    {
+        public Sender() : base()
         {
 
         }
@@ -18,8 +18,8 @@ namespace Therezin.WakeOnLan
             }
         }
 
-		public bool SendMagicPacket(byte[] macAddress)
-		{
+        public bool SendMagicPacket(byte[] macAddress)
+        {
             Connect(new IPAddress(0xFFFFFFFF), 0x2FFF);
             EnableBroadcastMode();
 
@@ -40,5 +40,5 @@ namespace Therezin.WakeOnLan
             Close();
             return ReturnValue == 0;
         }
-	}
+    }
 }

@@ -13,7 +13,7 @@ Send magic packet to a single device specified by its MAC address, e.g. `wol 01-
 
 `wol [address1] [address2]...[addressN]`
 
-Send magic packets to multiple MAc addresses separated by spaces, e.g. `wol 01-23-45-67-89-AB 23-45-67-89-AB-01`
+Send magic packets to multiple MAC addresses separated by spaces, e.g. `wol 01-23-45-67-89-AB 23-45-67-89-AB-01`
 
 ## Address formats
 

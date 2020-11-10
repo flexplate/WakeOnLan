@@ -23,7 +23,7 @@ Addresses formatted as three groups of four (e.g.` 0123.4567.89AB`) are also sup
 
 Addresses with no separators are also supported, e.g. `0123456789AB`.
 
-Due to spaces being used to define multiple addresses when waking more than one device, spaces are not supported as separators within a MAC address. Formatting an address as `01 23 45 67 89 AB` or similar will be interpreted as six separate invalid target devices.
+Due to spaces being used to define multiple addresses when waking more than one device, spaces are **not** supported as separators within a MAC address. Formatting an address as `01 23 45 67 89 AB` or similar will be interpreted as six separate invalid target devices.
 
 ## Credits and thankyous.
 
